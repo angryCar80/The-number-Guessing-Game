@@ -9,6 +9,18 @@ body {
     background-color: #f4f4f9;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #122f4d, #3581d2, #082f5a);
+    background-size: 300% 300%;
+    animation: gradientAnimation 10s infinite alternate;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
   }
   
   .game-container {
@@ -21,7 +33,7 @@ body {
   }
   
   h1 {
-    color: #333;
+    color: #0c0c0c;
   }
   
   input[type="number"] {
@@ -39,6 +51,11 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: 200ms ease, box-shadow 0.3s ease;
+  }
+  button:hover{
+    transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   }
   
   button:hover {
